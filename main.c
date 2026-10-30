@@ -2,7 +2,7 @@
 
 int main(void) {
   int n;
-  int odd = 0;
+  long long odd = 0;
   scanf("%d", &n);
 
   /* TODO: add up the odd numbers 1, 3, 5, ... that are <= n,
@@ -12,6 +12,6 @@ int main(void) {
       odd += i;
   }
 
-  printf("%d", odd);
+  printf("%lld", odd);
   return 0;
 }
