@@ -1,15 +1,17 @@
 #include <stdio.h>
 
 int main(void) {
-  double num1, num2 = 0.0;
-  int sum = 0;
+  int n;
+  int odd = 0;
+  scanf("%d", &n);
 
-  scanf("%lf", &num1);
-  scanf("%lf", &num2);
+  /* TODO: add up the odd numbers 1, 3, 5, ... that are <= n,
+     then print the total on one line. */
+  for (int i = 0; i <= n; i++) {
+    if (i % 2 != 0)
+      odd += i;
+  }
 
-  printf("%f\n", num1 + num2);
-  sum = num1 + num2;
-  printf("%d\n", sum);
-
+  printf("%d", odd);
   return 0;
 }
