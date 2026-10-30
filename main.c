@@ -1,17 +1,17 @@
 #include <stdio.h>
 
+void swap(int *a, int *b) {
+  // TODO: exchange the two ints that a and b point to.
+  int temp = *a;
+  *a = *b;
+  *b = temp;
+  // a and b are addresses; change the values stored there.
+}
+
 int main(void) {
-  int n;
-  long long odd = 0;
-  scanf("%d", &n);
-
-  /* TODO: add up the odd numbers 1, 3, 5, ... that are <= n,
-     then print the total on one line. */
-  for (int i = 0; i <= n; i++) {
-    if (i % 2 != 0)
-      odd += i;
-  }
-
-  printf("%lld", odd);
+  int a, b;
+  scanf("%d %d", &a, &b);
+  swap(&a, &b);
+  printf("%d %d\n", a, b);
   return 0;
 }
